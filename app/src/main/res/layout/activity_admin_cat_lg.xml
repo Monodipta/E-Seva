@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".user_catalouge.user_cat_lg">
+
+    <LinearLayout
+        android:id="@+id/linearlay"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/prucian_blue"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center|left"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imagecard"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardElevation="20dp">
+                    <ImageView
+                        android:id="@+id/adminimg"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:backgroundTint="@color/black"
+                        android:background="@drawable/baseline_person_24" />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center|left"
+                        android:text="Hello,"
+                        android:textColor="#c9FFFFFF"
+                        android:textSize="15sp"
+                        android:layout_marginTop="35dp"/>
+                    <TextView
+                        android:id="@+id/adminname"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center|left"
+                        android:text="USER NAME"
+                        android:textColor="#c9FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearlay"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:background="@drawable/user_cat_back"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="130dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:gravity="center">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/imagecard"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    app:cardCornerRadius="60dp"-->
+<!--                    app:cardElevation="20dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/adminimg"-->
+<!--                        android:layout_width="120dp"-->
+<!--                        android:layout_height="120dp"-->
+<!--                        android:background="@color/teal_200"-->
+<!--                        android:src="@drawable/baseline_person_24" />-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/adminname"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="145dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/administrator_s_name"-->
+<!--                android:textColor="#c9FFFFFF"-->
+<!--                android:textSize="20sp" />-->
+
+<!--        </RelativeLayout>-->
+<!--    </LinearLayout>-->
+
+    <FrameLayout
+        android:id="@+id/adframecontainer"
+        android:layout_width="match_parent"
+        android:layout_height="421dp"
+        android:layout_above="@+id/navbar"
+        android:layout_below="@+id/linearlay"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="1dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/prucian_blue"
+        app:menu="@menu/user_menu"
+        app:itemIconTint="#c9FFFFFF"
+        app:itemTextColor="@color/white"/>
+
+
+</RelativeLayout>

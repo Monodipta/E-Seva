@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".user_catalouge.user_cat_lg"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:id="@+id/rel_lay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/prucian_blue"
+            app:titleTextColor="#c9FFFFFF" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/linearlay"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/prucian_blue"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imagecard"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="20dp">
+                        <ImageView
+                            android:id="@+id/userimg"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:backgroundTint="@color/black"
+                            android:background="@drawable/baseline_person_24" />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center|left"
+                            android:text="Hello,"
+                            android:textColor="#c9FFFFFF"
+                            android:textSize="15sp"
+                            android:layout_marginTop="35dp"/>
+                        <TextView
+                            android:id="@+id/USERNAME"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center|left"
+                            android:text="USER NAME"
+                            android:textColor="#c9FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/USERNAME"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="15dp"-->
+<!--                    android:layout_marginTop="145dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/user_name"-->
+<!--                    android:textColor="#c9FFFFFF"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+
+            </RelativeLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/framecontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navbar"
+            android:layout_below="@+id/linearlay"
+            android:layout_marginTop="2dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#0f4d92"
+            app:menu="@menu/user_menu"
+            app:itemIconTint="#c9FFFFFF"
+            app:itemTextColor="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/composecomplaint"
+            android:layout_width="56dp"
+            android:layout_height="63dp"
+            android:layout_above="@+id/navbar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="75dp"
+            android:backgroundTint="@color/blue2"
+            android:src="@drawable/contract_edit_fill0_wght400_grad0_opsz48" />
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navheader"
+        app:menu="@menu/iconmenu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

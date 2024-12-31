@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="line">-->
+
+<!--        <stroke-->
+<!--            android:width="2dp"-->
+<!--            android:color="@color/black" />-->
+<!--        <corners-->
+<!--            android:radius="30dp"/>-->
+<!--        <-->
+<!--</shape>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#000000" /> <!-- Replace "#FF0000" with your desired underline color -->
+        <size android:height="5dp" />
+</shape>

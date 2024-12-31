@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".user_catalouge.comp_lay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:entries="@array/dept_names"
+            android:layout_gravity="right"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/add_title_here"
+            android:gravity="top|start"
+            android:textStyle="bold"
+            android:id="@+id/comp_title"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/add_your_tax_number_here"
+            android:gravity="top|start"
+            android:textStyle="bold"
+            android:id="@+id/tax_no"/>
+
+        <EditText
+            android:id="@+id/complaint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="top|start"
+            android:hint="@string/compose_complaint"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_download_24"
+            android:layout_marginTop="5dp"
+            android:id="@+id/downloadfile"
+            android:visibility="invisible"
+            android:backgroundTint="@color/blue2"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:layout_marginTop="5dp"
+            android:id="@+id/sendcomplaint"
+            app:fabSize="normal"
+            android:visibility="invisible"
+            android:backgroundTint="@color/blue2"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_mic_24"
+            android:layout_marginTop="5dp"
+            android:id="@+id/speechbtn"
+            app:fabSize="normal"
+            android:visibility="invisible"
+            android:backgroundTint="@color/blue2"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_fill0_wght400_grad0_opsz48"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/expand"
+            android:backgroundTint="@color/blue2"/>
+
+    </LinearLayout>
+</RelativeLayout>
